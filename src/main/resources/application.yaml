@@ -1,12 +1,16 @@
 spring:
   application:
     name: config-server
+  config:
+    import: "optional:file:.env[.properties]"
   cloud:
     config:
       server:
         git:
-          uri: /home/judamo/Projects/microservices-ecommerce/config-data
+          uri: https://github.com/JuD4Mo/config-data-ecommerce.git
+          username: ${GIT_USERNAME}
+          password: ${GIT_PASSWORD}
           clone-on-start: true
           default-label: main
 server:
-  port: 8888
+  port: 8881
