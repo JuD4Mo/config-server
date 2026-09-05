@@ -13,4 +13,4 @@ spring:
           clone-on-start: true
           default-label: main
 server:
-  port: 8881
+  port: 8888
